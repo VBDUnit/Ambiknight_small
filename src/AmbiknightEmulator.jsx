@@ -30,7 +30,7 @@ export default function AmbiknightEmulator() {
 
     imageNames.forEach(name => {
       const img = new Image();
-      img.src = `/public/${name}.jpg`;
+      img.src = `/${name}.jpg`;
       img.onload = () => {
         loadedImages[name] = img;
         loaded++;
