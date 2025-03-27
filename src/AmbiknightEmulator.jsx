@@ -30,7 +30,7 @@ export default function AmbiknightEmulator() {
 
     imageNames.forEach(name => {
       const img = new Image();
-      img.src = `/${name}.jpg`;
+      img.src = `${import.meta.env.BASE_URL}${name}.jpg`;
       img.onload = () => {
         loadedImages[name] = img;
         loaded++;
