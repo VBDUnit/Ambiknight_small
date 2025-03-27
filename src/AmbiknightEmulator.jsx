@@ -9,9 +9,9 @@ const nameTranslations = {
   "red_near": "Красный ближний",
   "green_near": "Зелёный ближний",
   "blue_near": "Синий ближний",
-  "red_far": "Красный задний",
-  "green_far": "Зелёный задний",
-  "blue_far": "Синий задний"
+  "red_far": "Красный дальний",
+  "green_far": "Зелёный дальний",
+  "blue_far": "Синий дальний"
 };
 
 const defaultCoeffs = {
@@ -30,7 +30,7 @@ export default function AmbiknightEmulator() {
 
     imageNames.forEach(name => {
       const img = new Image();
-      img.src = `${import.meta.env.BASE_URL}${name}.jpg`;
+      img.src = `/Ambiknight_small/${name}.jpg`;
       img.onload = () => {
         loadedImages[name] = img;
         loaded++;
